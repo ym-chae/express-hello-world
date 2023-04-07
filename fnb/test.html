@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+                    <title>WKWebViewBridge</title>
+                    <button
+                        style="width: 100%"
+                        type="button"
+                        onclick="goPrevPageWithData()">
+                        Close
+                    </button>
+                    <link rel="stylesheet" href="test.css">
+                        <script type="text/javascript" src="test.js"></script>
+                    </head>
+    <body>
+        <h3>브릿지 기능 테스트</h3>
+        <div style="width:100%; margin: 0 auto; text-align: all;">
+            <div style="width: 45%; display: inline-block; vertical-align: top;">
+                <p style="text-align: center;">Request</p>
+                <textarea id="request" name="request"></textarea>
+            </div>
+            <div style="width: 45%; display: inline-block; vertical-align: top; margin-left: 3%;">
+                <p style="text-align: center;">Response</p>
+                <textarea id="response" name="response"></textarea>
+            </div>
+
+            <div>
+                <button type="button"
+                    onclick="setPushstate(pushState)">
+                    푸시알림 토글설정
+                </button>
+                <button type="button"
+                    onclick="preventHistoryBack(historybackFlag)">
+                    네이티브 뒤로가기방지 토글설정
+                </button>
+                <button type="button"
+                    onclick="dataStorageSet()">
+                    리프레시토큰 저장
+                </button>
+                <button type="button"
+                    onclick="dataStorageGet()">
+                    리프레시토큰 조회
+                </button>
+                <button type="button"
+                    onclick="dataStorageDel()">
+                    리프레시토큰 삭제
+                </button>
+                <button type="button"
+                    onclick="dataStorageGetCpcd()">
+                    회사코드 조회
+                </button>
+            </div>
+
+            <div>
+                <button type="button"
+                    onclick="loginPayco()">
+                    SNS-PAYCO 로그인
+                </button>
+                <button type="button"
+                    onclick="loginFacebook()">
+                    SNS-페이스북 로그인
+                </button>
+                <button type="button"
+                    onclick="loginKakao()">
+                    SNS-카카오로그인
+                </button>
+                <button type="button"
+                    onclick="loginApple()">
+                    SNS-애플로그인
+                </button>
+                <button type="button"
+                    onclick="logOut()">
+                    로그아웃
+                </button>
+                <button type="button"
+                    onclick="generateBarcode()">
+                    바코드 생성
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
+
