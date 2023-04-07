@@ -4,6 +4,11 @@ const port = process.env.PORT || 3001;
 
 app.get("/", (req, res) => res.type('html').send(html));
 
+app.get('/fnb', function(request, response) {
+  response.sendFile(__dirname +  '/test.html');
+});
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
