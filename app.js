@@ -8,6 +8,9 @@ app.get('/fnb', function(request, response) {
   response.sendFile(__dirname +  '/fnb/test.html');
 });
 
+app.use(express.static(path.join(__dirname, 'fnb')))  
+
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
