@@ -5,7 +5,7 @@ const port = process.env.PORT || 3001;
 app.get("/", (req, res) => res.type('html').send(html));
 
 app.get('/fnb', function(request, response) {
-  response.sendFile(__dirname +  'fnb/test.html');
+  response.sendFile(__dirname +  '/fnb/test.html');
 });
 
 
