@@ -5,11 +5,11 @@ const port = process.env.PORT || 3001;
 
 app.get("/", (req, res) => res.type('html').send(html));
 
-app.get('/fnb', function(request, response) {
-  response.sendFile(__dirname +  '/fnb/test.html');
+app.get('/test', function(request, response) {
+  response.sendFile(__dirname +  '/test/test.html');
 });
 
-app.use(express.static(path.join(__dirname, 'fnb')))  
+app.use(express.static(path.join(__dirname, 'test')))  
 
 
 
