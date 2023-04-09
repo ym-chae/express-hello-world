@@ -4,10 +4,14 @@ function sendNativeAction(serviceName, functionName, params) {
     fnbBridge.sh.exec(success, fail, serviceName, functionName, params);
 }
 function success(data, params) {
-    
+    console.log(data)
+    var request = document.getElementById('response')
+    request.value = JSON.stringify(params, null, 4)
 }
 function fail(data, params) {
-    
+    console.log(data)
+    var request = document.getElementById('response')
+    request.value = JSON.stringify(params, null, 4)
 }
 function callbackListener(result) {
     
@@ -106,9 +110,9 @@ fnbBridge.sh.exec = function(successCallback, failCallback, className, command, 
 fnbBridge.sh.aosCommand = function(callbackID, className, command, params){
     var strCallbackID = callbackID.toString();
     var message = {
-        "callbackID": strCallbackID,
-        "className": className,
-        "command": command,
+        "requestId": strCallbackID,
+        "serviceName": className,
+        "action": command,
         "params": params
     };
     
